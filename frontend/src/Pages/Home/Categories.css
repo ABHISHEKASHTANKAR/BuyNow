@@ -1,0 +1,42 @@
+.category-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.category .cat-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.cat-img img{
+    width: 80px;
+    height: 80px;
+    transition: all 0.5s ease;
+}
+
+.category span{
+    color: #565656;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.category:hover span{
+    color: gold;
+}
+
+.category:hover .cat-img img{
+    transform: scale(1.1);
+}

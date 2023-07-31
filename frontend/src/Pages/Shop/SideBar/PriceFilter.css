@@ -1,0 +1,81 @@
+.price-filter{
+    width: 100%;
+    border: solid 1px #bfbfbf;
+}
+
+.price-filter .heading{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #efefef;
+    color: #565656;
+    border-bottom: solid 1px #bfbfbf;
+}
+
+.price-slider{
+    margin: 0;
+    width: 89%;
+    margin: 1rem;
+}
+
+.horizontal-slider{
+    cursor: pointer;
+   margin-top: 25px;
+}
+
+.horizontal-slider .example-track{
+    height: 5px;
+    border-radius: 10px;
+}
+
+.example-track-0, .example-track-2{
+    background: #bfbfbf;
+}
+
+.example-track-1{
+    background: gold;
+    border-radius: 5px;
+}
+
+.example-thumb{
+    border: solid 3px gold;
+    top: -5px;
+    border-radius: 50%;
+    background: #ffffff;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.thumb-value{
+    position: absolute;
+    font-size: 0.6rem;
+    top: -2rem;
+    background: #6b6b6b;
+    padding: 5px;
+    border-radius: 1rem;
+    color: #ffff;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.price-filter .horizontal-slider:hover .thumb-value{
+    display: block;
+}
+
+.price-value{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 0.5rem;
+}
+.price-value span{
+    margin: 0 1rem;
+    font-size: 0.8rem;
+    color: #565656;
+}

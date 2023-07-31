@@ -1,0 +1,97 @@
+.account{
+    display: flex;
+    flex-direction: column;
+}
+
+.account-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.account-top h4{
+    margin: 0;
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.account-top .user-icon{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px 8px 12px;
+    border-radius: 50%;
+    color: gold;
+    box-shadow: 0 0 10px gold;
+}
+
+.account-top .edit-btn{
+    text-decoration: none;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: #565656;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.account-top .edit-btn:hover{
+    background: #6868ff;
+    color: white;
+}
+
+.account-bottom{
+    padding: 1rem 1rem 0.5rem;
+}
+
+
+.account-bottom .form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.account-bottom .form div{
+    display: flex;
+    align-items: center;
+}
+
+.account-bottom .form label{
+    width: 150px;
+    height: 25px;
+    color: #565656;
+}
+
+.account-bottom #name{
+    width: 80%;
+}
+
+.account-bottom form .input{
+    width: 80%;
+}
+
+.account-bottom form button{
+    margin: 1rem 0 0.8rem;
+    width: 250px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.account-bottom form button:hover{
+    color: #ffffff;
+    background-color: #6868ff;
+}

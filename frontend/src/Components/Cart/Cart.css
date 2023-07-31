@@ -1,0 +1,137 @@
+.cart-container{
+    position: fixed;
+    top:0;
+    right: -100%;
+    bottom: 0;
+    background: #ffffff;
+    width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    padding: 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-active{
+    right: 0;
+}
+
+.cart-container .cart-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.cart-container .cart-top h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #565656;
+    margin: 0;
+}
+
+.cart-top .close-btn{
+    font-size: 1.5rem;
+    color: #565656;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-mid{
+    height: 75%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.cart-mid::-webkit-scrollbar{
+    display: none;
+}
+
+.cart-mid .empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    color: #565656;
+    margin-top: 100px;
+}
+
+.cart-mid .empty-cart h3{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.cart-mid .empty-cart p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #a38c0b;
+    margin: 0;
+}
+
+.cart-mid .empty-cart img{
+    width: 50%;
+}
+
+.cart-container .cart-bottom{
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.cart-bottom .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0;
+    color: #565656;
+}
+
+.cart-bottom .text p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.cart-buttons{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cart-buttons button{
+    width: 48%;
+    height: 40px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: solid 1px #e4e4e4;
+    color: #565656;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    background: #e4e4e4;
+}
+
+.cart-buttons button:hover{
+    background: gold;
+    color: #241f02;
+}
+
+

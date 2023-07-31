@@ -1,0 +1,29 @@
+.sort-modal{
+    position: absolute;
+    right: 55px;
+    top: 55px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    z-index: 555;
+}
+
+.sort-modal .sort-item{
+    text-decoration: none;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #565656;
+}
+
+.sort-item:hover{
+    background: #efefef;
+}
+
+.sort-modal .active{
+    background: #efefef;
+}
+

@@ -1,0 +1,156 @@
+.add-product {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.add-product .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #565656;
+    padding-bottom: 0.8rem;
+    border-bottom: solid 2px #e4e4e4;
+    margin-bottom: 1rem;
+}
+
+.add-product .title {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.add-product .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.add-product .bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+
+.input {
+    height: 40px;
+    padding: 0 1rem;
+    border: solid 1px #b4b4b4;
+    font-size: 14px;
+    color: #565656;
+}
+
+.input::placeholder {
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+
+#input-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+#description {
+    font-size: 14px;
+    padding: 1rem;
+    height: 75px;
+    font-family: 'Poppins';
+}
+
+label {
+    margin-right: 1rem;
+}
+
+#category {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    outline: none;
+}
+
+#category:hover {
+    border-color: #999;
+}
+
+#category option{
+    padding: 15px;
+}
+
+#category option:checked {
+    background-color: #ccc;
+    color: #565656;
+}
+
+#category::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.selected-options{
+    display: flex;
+    column-gap: 5px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.category-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    border: solid 1px gold;
+    border-radius: 10px;
+    padding: 2px 5px;
+    background: #ffef96df;
+}
+
+.category-btn .remove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#submit-btn{
+    height: 40px;
+    color: #565656;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    letter-spacing: 2px;
+    width: 50%;
+    background: #ffef96df;
+    border: solid 2px gold;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#submit-btn:hover{
+    background: #fffb79;
+}
+
+#name, #brand, #price, #stock{
+    width: 45%;
+}
+
+

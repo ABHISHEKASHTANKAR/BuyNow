@@ -1,0 +1,26 @@
+.user-modal{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    z-index: 555;
+}
+
+.user-modal .user-item{
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #565656;
+}
+
+.user-item:hover{
+    background: #efefef;
+}
+
+.user-modal .active{
+    background: #efefef;
+}
+

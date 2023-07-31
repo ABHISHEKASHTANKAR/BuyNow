@@ -1,0 +1,41 @@
+
+.banner-container{
+    padding: 1rem 0;    
+    margin:0 1rem;
+}
+
+.mySwiper{
+    height: 300px;
+    width: 100%;
+}
+
+.img-container{
+   width: 100px;
+   
+}
+
+.banner-img{
+  height: 90%;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    background: #727272a0;
+    height: 125px;
+    width: 40px;
+    border-radius: 5px;
+    position: absolute;
+    border: solid 2px #565656;
+    top: 30%;
+}
+
+.swiper-button-next:after, 
+.swiper-button-prev:after{
+    font-size: 1.8rem;
+    color: gold;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet-active{
+    background: gold;
+}

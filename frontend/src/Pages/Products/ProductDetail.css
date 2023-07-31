@@ -1,0 +1,137 @@
+.product-detail {
+    border: solid 2px #efefef;
+    min-height: 80vh;
+    margin: 6rem 4rem 2rem;
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-detail-left {
+    width: 400px;
+    border: solid 3px #e4e4e4;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-detail-left .product-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.sticker {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #efefef;
+    padding: 8px;
+    border-bottom-left-radius: 8px;
+    font-size: 14px;
+    color: red;
+}
+
+.product-detail-right {
+    padding: 1.5rem;
+    width: 54%;
+}
+
+.product-detail-right .right-top .name {
+    color: #6969ff;
+    font-weight: 600;
+    margin: 0;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: 500;
+    color: #565656;
+    margin: 0;
+}
+
+.right-top .price {
+    margin: 0;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+    color: #565656;
+}
+
+.description {
+    font-size: 13px;
+    color: #565656;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.btns {
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns button {
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    background: #e4e4e4;
+    color: #565656;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btns button:hover {
+    color: #fff;
+    background: #6969ff;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+.product-detail #input-div{
+    border: none;
+    justify-content: flex-start;
+}
+
+#input-div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#input-div div span{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+}
+
+.increament-btn, .decrement-btn{
+    cursor: pointer;
+}
+
+#input-div input{
+    text-align: center;
+    width: 100px;
+}

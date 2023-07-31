@@ -1,0 +1,19 @@
+.profile-sidebar{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #e4e4e4;
+    row-gap: 5px;
+    padding: 2rem;
+    align-items: center;
+}
+
+.profile-sidebar h4{
+    margin: 0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 2px #e4e4e4;
+    color: #565656;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+}
