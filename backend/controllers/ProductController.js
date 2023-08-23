@@ -33,19 +33,18 @@ export const addProduct = async (req, res) => {
             category,
             rating,
             description,
-            stock
+            stock,
+            image
         } = req.body;
-
-        const arr = category.split(",");
 
         const newProduct = {
             name,
             price,
             brand,
-            category : arr,
+            category,
             rating,
             description,
-            image: `http://localhost:${process.env.PORT}/products/${req.file.filename}`,
+            image,
             stock
         }
 

@@ -6,11 +6,14 @@ import { RxCross2 } from 'react-icons/rx'
 import { closeAddProductModal } from '../../../Store/Slices/AdminSlice';
 import { enqueueSnackbar } from 'notistack';
 import { addProductAPI } from '../../../APIS';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import storage from '../../../firebase';
 
 const AddProduct = () => {
 
     const AddProductState = useSelector((state) => state.admin.AddProductModal);
     const dispatch = useDispatch();
+    const [file, setFile] = useState(null);
 
     const [formData, setFormData] = useState({
         name: "",
@@ -19,7 +22,7 @@ const AddProduct = () => {
         stock: "",
         rating: "",
         category: new Set(),
-        image: null,
+        image : "",
         description: ""
     })
 
@@ -32,15 +35,36 @@ const AddProduct = () => {
 
     const handleAddProduct = async (e) => {
         e.preventDefault();
-        const bodyData = new FormData();
-        bodyData.append('name', formData.name);
-        bodyData.append('price', Number(formData.price));
-        bodyData.append('rating', Number(formData.rating));
-        bodyData.append('description', formData.description);
-        bodyData.append('category', categoryArr);
-        bodyData.append('brand', formData.brand);
-        bodyData.append('stock', Number(formData.stock));
-        bodyData.append('product', formData.image);
+        const fileName = Date.now() + file.name;
+        const storageRef = ref(storage, `images/${fileName}`);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                const uploaded = Math.floor(
+                    (snapshot.bytesTransferred/snapshot.totalBytes)*100
+                );
+                console.log(uploaded);
+            },
+            (error) =>{
+                console.log(error);
+            },
+            ()=>{
+                getDownloadURL(uploadTask.snapshot.ref).then((url)=>{
+                    setFormData((prevData)=>{
+                        return {
+                            ...prevData,
+                            image : url
+                        }
+                    })
+                })
+            }
+        )
+
+        const bodyData = {
+            ...formData,
+            category : categoryArr
+        }
 
 
         try {
@@ -79,21 +103,16 @@ const AddProduct = () => {
         })
     }
 
-    console.log(categoryArr);
 
     const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        setFormData((prevData) => {
-            return {
-                ...prevData,
-                image: file,
-            }
-        })
+        const image = e.target.files[0];
+        setFile(image);
     }
 
 
 
     const handleRemove = (e) => {
+        console.log("deleting");
         setFormData((prevData) => {
             const updatedCategory = new Set(prevData.category);
             updatedCategory.delete(e.target.parentElement.id);

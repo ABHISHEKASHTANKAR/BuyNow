@@ -1,6 +1,6 @@
 // HOST API
 
-const host = 'http://localhost:3001';
+const host = 'https://buy-now-nvqq.onrender.com';
 
 
 // USER APIS

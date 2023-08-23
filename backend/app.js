@@ -5,9 +5,6 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 
-
-
-
 // Route Imports
 import productRoute from './routes/ProductRoutes.js'
 import userRoute from './routes/UserRoutes.js'
@@ -23,7 +20,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(cors({
-    origin: true, // Replace with your React.js application's origin
+    origin: true,
     credentials: true,
 }));
 app.use(express.json());
