@@ -55,7 +55,7 @@ export const loginUser = async(req, res) => {
 
         const options = {
             Expires : new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-            HttpOnly : true,
+            Secure: true
         }
 
         const token = jwt.sign({id : user._id}, process.env.JWT_SECRET_KEY);

@@ -44,6 +44,7 @@ const Navbar = () => {
       setUser(response.data);
     }
   }
+  console.log(user);
 
   useEffect(() => {
     getUser();
