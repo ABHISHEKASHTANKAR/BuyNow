@@ -11,11 +11,11 @@ router.get("/logout", logoutUser);
 
 
 
-router.get("/user/:id", verifyToken, getUser);
-router.put("/user/update/:id", verifyToken, updateUser);
-router.post("/wishlist", verifyToken, addToWishList);
+router.get("/user/:id", getUser);
+router.put("/user/update/:id", updateUser);
+router.post("/wishlist", addToWishList);
 // router.get("/wishlist/:userId", verifyToken, getProductsFromWishList);
-router.get("/wishlist/:userId", verifyToken, getWishlist);
-router.post("/cart/add", verifyToken, addToCart);
+router.get("/wishlist/:userId", getWishlist);
+router.post("/cart/add", addToCart);
 
 export default router;
